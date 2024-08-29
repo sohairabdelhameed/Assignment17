@@ -24,7 +24,10 @@ namespace Assignment17.Context
         =>
          optionsBuilder.UseSqlServer("Server=.;Database=EnterpriseDbContext;Trusted_Connection=True;TrustServerCertificate=True;");
 
+       
         public DbSet<Employee> Employees { get; set; }
+
+
         
     }
 }

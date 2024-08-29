@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ITI.Entities
 {
-    internal class Stud_Course
+    public class Stud_Course
     {
         public int stud_ID { get; set; }
         public int Course_ID { get; set; }
-        public string? Grade { get; set; }
+        public string Grade { get; set; }
+
+        // Navigation Properties
+        public Student Student { get; set; }
+        public Course Course { get; set; }
     }
 }

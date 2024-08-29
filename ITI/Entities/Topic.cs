@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace ITI.Entities
 {
-    internal class Topic
+    public class Topic
     {
         public int ID { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
+
+        // Navigation Property
+        public ICollection<Course> Courses { get; set; }
     }
 }

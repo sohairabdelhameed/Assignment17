@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace ITI.Entities
 {
-    internal class Department
+    public class Department
     {
         public int ID { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public int Ins_ID { get; set; }
         public DateTime HiringDate { get; set; }
+
+        // Navigation Properties
+        public ICollection<Student> Students { get; set; }
+        public ICollection<Instructor> Instructors { get; set; }
     }
 }
